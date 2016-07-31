@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Czat dla użytkowników Wykop.pl">
+    <meta name="author" content="mirko_chat">
+    <meta name="theme-color" content="#333333">
+    <meta name="referrer" content="origin">
+
+    <title>MirkoCzat.pl</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link id="icon" rel="shortcut icon" type="image/x-icon" href="code/assets/images/icon.png">
+    <link rel="manifest" href="code/assets/manifest.json">
+  </head>
+  <body id="body">
+    <h2>F.A.Q</h2>
+
+    <p>
+      <blockquote>
+        Czym jest mirkoczat i dlaczego nie wykop?
+      </blockquote>
+      <p>Mirkoczat jest miejscem, gdzie użytkownicy Wykopu mogą rozmawiać i komentować
+      aktualne wydarzenia na streamie typu #mecz, #debata, #ama. Wszędzie tam, gdzie
+      ważna jest chwila, a nie atencja.</p>
+      <p>Dzięki zintegrowanemu logowaniu, nie trzeba zakładać konta na nowym serwisie,
+      zaś rozmowa odbywa się wśród znanych nicków i awatarów.</p>
+      <p>Dzięki osobnemu logowaniu do każdej dyskusji, możesz jednocześnie brać udział
+      w dwóch debatach - na jednej pod własnym kontem, na drugiej anonimowo.</p>
+
+      <b>Podsumowując:</b><br>
+      Wykop - permanentne wpisy, dobrze przygotowane i surowo oceniane.<br>
+      Mirko - złe wpisy pozostają niezauważone, dobre mają atencję na 6-24h.<br>
+      MirkoCzat - chwilowe komentarze do rzeczy, które dzieją się teraz + #chcepogadac<br>
+    </p>
+
+    <p>
+      <blockquote>
+        Jakie komendy ma zwykły użytkownik?
+      </blockquote>
+      <p>
+        /priv {user} - np. "/priv mirko_chat" tworzy tajny czat i podsyła Tobie i
+        jednej wybranej osobie linka. Po kliknięciu na niego, możecie rozmawiać we
+        dwoje, bądź wysłać link innym osobom.
+      </p>
+      <p>
+        /ping - sprawdza, czy serwer działa. Jeśli tak, na czacie pojawi się "Pong.",
+        ale tylko Ty to będziesz widzieć.
+      </p>
+      <p>
+        /mark - ustawia znacznik na czacie, który może być traktowany jako zakładka
+        jeśli nie możemy czytać czatu przez chwilę i chcemy wiedzieć gdzie skończyliśmy.
+      </p>
+      <p>
+        /stream - zwraca listę popularnych streamów podesłanych do mirkoczata.
+      </p>
+      <p>
+        /n - zwraca listę obecności. Głównie dla użytkowników na telefonach z małym
+        ekranem.
+      </p>
+    </p>
+
+    <p>
+      <blockquote>
+        Jak wyłączyć dźwięk lub zaproszenia do prywatnego czatu?
+      </blockquote>
+      <p>
+        W prawym górnym rogu ekranu należy kliknąć na Ustawienia, wybrać odpowiednie
+        opcje, po czym kliknąć "Zapisz".
+      </p>
+    </p>
+
+
+    <p>
+      <blockquote>
+        Co oznacza @ i + przed nickiem?
+      </blockquote>
+      <p>@ oznacza, że użytkownik jest moderatorem dyskusji. Może uciszać użytkowników,
+        zmieniać temat oraz nadawać prawa użytkownikom. Moderator może mówić, gdy
+        wszyscy użytkownicy są uciszeni.
+      </p>
+      <p>
+        + oznacza, że użytkownik został wyróżniony. Może mówić, gdy wszyscy są uciszeni
+        oraz jest wysoko na liście dyskutantów.
+      </p>
+    </p>
+
+    <p>
+      <blockquote>
+        Jakie komendy ma moderator?
+      </blockquote>
+      <p>
+        /topic {temat} - np. "/topic http://invalid.fake/link | Stream działa" ustawia
+        nowy temat, który będzie wyświetlony wszystkim na górze ekranu.
+      </p>
+      <p>
+        /mute {user} - np. "/mute mirko_chat" ucisza użytkownika, blokując odbieranie
+        jego wiadomości przez inne osoby w pokoju. Można je odwołać za pomocą komendy
+        /unmute {user}.
+      </p>
+      <p>
+        /mute_anon - ucisza wszystkich niezalogowanych. Komendę można odwołać za
+        pomocą /unmute_anon.
+      </p>
+      <p>
+        /mute_all - ucisza wszystkich poza moderatorami i wyróżnionymi. Komendę można
+        odwołać za pomocą /unmute_all
+      </p>
+      <p>
+        /op {user} - np. "/op mirko_chat" mianuje użytkownika moderatorem, samemu
+        nie tracąc statusu moderatora. Komendę można odwołać za pomocą /unop {user}.
+      </p>
+      <p>
+        /v {user} - np. "/v mirko_chat" wyróżna użytkownika. Komendę można odwołać
+        za pomocą /unv {user}.
+      </p>
+      <p>
+        /help_op - lista komend moderatora
+      </p>
+    </p>
+
+    <p>
+      <blockquote>
+        Dlaczego nie pokazują się zdjęcia?
+      </blockquote
+      <p>
+        Można doinstalować Userscript, który będzie pokazywał miniaturki po najechaniu
+        myszą na link np. https://w9p.co/userscripts/mpiv/
+      </p>
+    </p>
+
+    <p>
+      <blockquote>
+        Czy czat może wyświetlać się odwrotnie? Jak w innych czatach?
+      </blockquote>
+      <p>
+        Opcja nie cieszyła się dużym powodzeniem (http://www.wykop.pl/wpis/16323127/),
+        ale można ją włączyć za pomocą GreaseMonkey. Wystarczy zainstalować
+        <a href="http://mirkoczat.pl/old-ver/mirkoczat_0.8.6.user.js">ten skrypt</a>.
+      </p>
+    </p>
+
+    <p>
+      <blockquote>
+        Czy mogę osadzić czat na stronie wykopu?
+      </blockquote>
+      <p>
+        Tak! Zainstaluj poniższy skrypt GreaseMonkey (dla Firefox) lub TamperMonkey (dla Chrome):
+        <a href="http://mirkoczat.pl//mirkoczat_embed.user.js">skrypt</a>.
+      </p>
+    </p>
+
+    <p>
+      <blockquote>
+        Jakie pomysły są w planach?
+      </blockquote>
+      <ul>
+        <li>oraz wiele innych!</li>
+      </ul>
+    </p>
+
+    <p>
+      <blockquote>
+        Jakich pomysłów nie ma w planach?
+      </blockquote>
+      <ul>
+        <li>centralna moderacja i banowanie</li>
+        <li>zastępowanie wykopu i mirko</li>
+      </ul>
+    </p>
+
+
+    <p>
+      <blockquote>
+        Gdzie można zadawać pytania, zgłaszać błędy i pomysły?
+      </blockquote>
+      Wyślij Wiadomość Prywatną do <a href="http://www.wykop.pl/ludzie/mirko_chat/">mirko_czat</a>.
+    </p>
+
+    <h2>Podziękowania</h2>
+
+    <ul>
+      <li>dzwięk użyty do @wołania: http://www.freesound.org/people/juskiddink/sounds/130853/</li>
+    </ul>
+
+  </body>
+</html>

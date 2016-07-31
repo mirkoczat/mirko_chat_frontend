@@ -1,0 +1,146 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 0px;
+  background: #1c1c1c;
+  color: #cacecf;
+  font-family: 'Open Sans', sans-serif;
+}
+div.navbar, div.navbar-default {
+  color: #cacecf;
+  background: #1c1c1c;
+  border-bottom: 1px solid #444;
+}
+#content {
+  margin-left: 20px;
+}
+.row {
+  margin-right: 0px;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  padding-top: 1em;
+  background-color: #1c1c1c;
+  border-top: 1px solid #444;
+}
+.form-control, .input-group span.input-group-addon, .input-group input.form-control {
+  background-color: #1c1c1c;
+  color: #cacecf;
+  border: 1px solid #444;
+}
+
+.btn-primary {
+    background-color: #ff5917;
+    border-color: #ff5917;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.btn-primary:hover {
+    background-color: #ff6927;
+    border-color: #ff6927;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.btn-default {
+  color: #cacecf;
+  background-color: #1c1c1c;
+  border-color: #444;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.btn-default:hover {
+  color: #cacecf;
+  background-color: #1c2c1c;
+  border-color: #555;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.navbar-brand, .navbar-nav > li > a {
+  text-shadow: none;
+}
+
+.msg-info {
+  color: #ff5917;
+}
+
+.msg {
+  max-height: 60px; /* 3 lines */
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.msg-anon {
+  max-height: 20px; /* 2 lines */
+  overflow: hidden;
+}
+
+#messages {
+  margin-top: 0px;
+}
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 40px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+#footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+.votersContainer {
+  min-height: 18px;
+  margin-bottom: 6px;
+}
+
+.embed {
+  background-color: #232323 !important;
+  margin-left: -20px;
+}
+
+div.important {
+  background-color: #444444;
+}
+
+
+.rooms h4 {
+  font-size: 1.75em;
+}
+.rooms p {
+  font-size: 1.25em;
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+.rooms form {
+  margin-bottom: 1.5em;
+}
+.rooms form ~ p {
+  font-size: 1em;
+  margin-top: 8px;
+}
+.rooms button {
+  padding-left: 8px;
+  padding-top: 0;
+}

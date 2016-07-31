@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Czat dla użytkowników Wykop.pl">
+    <meta name="author" content="mirko_chat">
+    <meta name="theme-color" content="#333333">
+    <meta name="referrer" content="origin">
+
+    <title>MirkoCzat.pl</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link id="icon" rel="shortcut icon" type="image/x-icon" href="code/assets/images/icon.png">
+    <link rel="manifest" href="code/assets/manifest.json">
+  </head>
+  <body id="body">
+    <div id="content" />
+    <div id="messages" class="container"></div>
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-2 col-xs-2">
+            <div class="input-group">
+              <span class="input-group-addon">@</span>
+              <input id="username" type="text" class="form-control" value="USERNAME" disabled>
+            </div><!-- /input-group -->
+          </div><!-- /.col-lg-6 -->
+          <div class="col-sm-10 col-xs-10">
+            <input id="message-input" class="form-control" />
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+      </div>
+    </div>
+    <div id="js-app-container">
+      <script id="js-app" src="assets/js/app.js"></script>
+      <script>require('web/static/js/app').start('hydepark', 'http://a.wykop.pl/user/connect/appkey,UjmPx8dGNW,redirect,aHR0cHM6Ly9taXJrb2N6YXQucGwvdC9oeWRlcGFyaw==,secure,33659d792a6b0624d82e5b7bbc186a8d')</script>
+    </div>
+  </body>
+</html>

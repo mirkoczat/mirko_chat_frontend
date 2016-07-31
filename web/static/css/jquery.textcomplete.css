@@ -1,0 +1,50 @@
+/* Sample */
+
+.dropdown-menu {
+    border: 1px solid #444;
+    background-color: #1c1c1c;
+    color: #cacecf;
+}
+
+.dropdown-menu li {
+    border-top: 1px solid #444;
+    padding: 2px 5px;
+}
+
+.dropdown-menu li:first-child {
+    border-top: none;
+}
+
+.dropdown-menu li:hover,
+.dropdown-menu .active,
+.dropdown-menu .active a {
+  background-color: #444;
+}
+
+ul.dropdown-menu > li.textcomplete-item > a {
+  color: #cacecf;
+}
+
+.dropdown-menu li:hover, .dropdown-menu .active, .dropdown-menu .active a  {
+  background-color: #444;
+  background-image: none;
+}
+
+
+
+/* SHOULD not modify */
+
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu a {
+    color: #cacecf;
+}
+
+
+.dropdown-menu a:hover {
+    cursor: pointer;
+}
