@@ -52,7 +52,7 @@ export class Message extends React.Component {
       //styleDiv.backgroundColor = '#444'
       classDiv = 'important'
     }
-    var body = Util.urlify(this.props.msg.body)
+    var body = Util.urlify(this.props.msg.body).replace(/\*\*(.*?)\*\*/g, '<strong>\2</strong>').replace(/\*(.*?)\*/g, '<em>\2</em>')
     var avatar = Util.avatar(this.props.msg)
     var time = ''
     if (this.stream.settingShowTime()) {
