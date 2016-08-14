@@ -39,21 +39,21 @@ export class Notifier {
           this.audio.play();
         }
       }
-      if (this.stream.settingNotifyMentions()) {
-        if ("Notification" in window) {
-          if (Notification.permission === "granted") {
-            new Notification('Oznaczono cię: ' + msg.user + ' - ' + msg.body);
-          } else if (Notification.permission !== 'denied') {
-            Notification.requestPermission(function (permission) {
-              new Notification('Oznaczono cię: ' + msg.user + ' - ' + msg.body);
-            });
-          }
-        }
-      }
       if (!document.hasFocus()) {
         this.unseen_msg_count += 1
         document.title = "(" + this.unseen_msg_count + ") " + this.title
         $('#icon').prop('href', '/images/icon_new.png')
+        if (this.stream.settingNotifyMentions() && isMention(msg)) {
+          if ("Notification" in window) {
+            if (Notification.permission === "granted") {
+              new Notification('Oznaczono cię: ' + msg.user + ' - ' + msg.body);
+            } else if (Notification.permission !== 'denied') {
+              Notification.requestPermission(function (permission) {
+                new Notification('Oznaczono cię: ' + msg.user + ' - ' + msg.body);
+              });
+            }
+          }
+        }
       }
     }
   }
