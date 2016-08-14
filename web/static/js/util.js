@@ -52,7 +52,7 @@ export class Util {
   }
   static isBlacklisted(stream, msg) {
     var blacklisted = stream.settingBlacklist().split(" ")
-    var isNotBlacklisted = ($.inArray(msg.user, blacklisted) == -1)
+    var isNotBlacklisted = ($.inArray(msg.user, blacklisted) == -1) && !(!stream.settingMuteAnon() || !Util.isAnon(msg))
     return !isNotBlacklisted
   }
   static isFollowed(stream, msg) {

@@ -165,6 +165,9 @@ export class Stream {
   settingShowPrivBox() {
     return ("true" === window.localStorage.getItem('show_priv_box')) || false
   }
+  settingNotifyMentions() {
+    return ("true" === window.localStorage.getItem('notify_mentions')) || false
+  }
   settingFollowed() {
     return window.localStorage.getItem('followed') || ""
   }
