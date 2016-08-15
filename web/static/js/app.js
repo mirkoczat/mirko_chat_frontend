@@ -29,17 +29,12 @@ class App extends React.Component {
   }
   render() {
     var styleLeft = {
-      overflow: 'hidden',
-      overflowY: 'auto',
       height: window.innerHeight
     }
     var styleMid = {
-      padding: '5px',
-      overflow: 'auto',
       height: window.innerHeight
     }
     var styleRight = {
-      overflow: 'auto',
       height: window.innerHeight
     }
     if (this.props.embed) {
@@ -47,7 +42,7 @@ class App extends React.Component {
         display: 'none'
       }
       return <div className="row embed">
-        <div className="col-xs-12" style={styleMid}>
+        <div className="col-xs-12 mid" style={styleMid}>
           <Chat stream={this.stream} tag={this.tag} />
         </div>
         <div style={styleHidden}>
@@ -56,10 +51,6 @@ class App extends React.Component {
           <Rooms stream={this.stream} tag={this.tag} />
         </div>
       </div>
-    } else {
-      styleMid['borderLeft'] = '1px solid #444'
-      styleMid['borderRight'] = '1px solid #444'
-      styleMid['backgroundColor'] = '#2c2c2c'
     }
     return <div className="row">
       <div className="col-xs-12 col-sm-12 hidden-md hidden-lg">
@@ -67,11 +58,11 @@ class App extends React.Component {
           Ustawienia
         </a>
       </div>
-      <div className="hidden-xs hidden-sm col-md-2" style={styleLeft}>
+      <div className="hidden-xs hidden-sm col-md-2 left" style={styleLeft}>
         <Rooms stream={this.stream} tag={this.tag} /></div>
-      <div className="col-sm-10 col-md-8" style={styleMid}>
+      <div className="col-sm-10 col-md-8 mid midfull" style={styleMid}>
         <Chat stream={this.stream} tag={this.tag} /></div>
-      <div className="col-sm-2 col-md-2" style={styleRight}>
+      <div className="col-sm-2 col-md-2 right" style={styleRight}>
         <a name="settings"></a>
         <Users stream={this.stream} login_url={this.login_url} /></div>
     </div>
