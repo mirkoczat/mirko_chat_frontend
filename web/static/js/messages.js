@@ -37,20 +37,14 @@ export class Message extends React.Component {
       || (Util.isFollowed(this.stream, msg))
   }
   render() {
-    var classDiv = ''
-    var styleDiv = {
-      marginBottom: '5px'
-    }
-    var styleAvatar = {
-      display: 'inline'
-    }
+    var classDiv = 'message'
     var styleLink = {
       color: this.props.msg.color
       , cursor: 'pointer'
     }
     if (this.isImportant(this.props.msg)) {
       //styleDiv.backgroundColor = '#444'
-      classDiv = 'important'
+      classDiv += ' important'
     }
     var body = Util.urlify(this.props.msg.body)
     var avatar = Util.avatar(this.props.msg)
@@ -75,9 +69,9 @@ export class Message extends React.Component {
     // ref={function(el) {jQuery(el).tooltip()}}
     // data-toggle="tooltip" data-placement="right"
     // ref={function(el) {jQuery(el).tooltip()}}
-    return <div className={classDiv} style={styleDiv}>
+    return <div className={classDiv}>
       {time}
-      <div className="avatar-plus" data-uid={this.props.msg.key} style={styleAvatar} onClick={this.onAvatarClick}
+      <div className="avatar-plus" data-uid={this.props.msg.key} onClick={this.onAvatarClick}
         onMouseOver={this.onMouseOver} onMouseLeave={this.onMouseLeave}
         title="Daje plusa wypowiedzi">
         {avatar}

@@ -26,17 +26,11 @@ export class Util {
     }
   }
   static avatar(user) {
-    var styleImg = {
-      backgroundColor: Util.genderColor(user.sex)
-      , paddingLeft: '5px'
-      , width: '35px'
-      , height: '30px'
-    }
     var avatar = user.avatar || "/images/empty.gif"
     if (window.location.protocol == "https:") {
       avatar = avatar.replace("http://", "/imgwykop?url=")
     }
-    return <img src={avatar} alt="" style={styleImg} />
+    return <img className={"avatar " + user.sex} src={avatar} alt=""/>
   }
   static numFormat(value, numerals) {
     var t0 = value % 10,
