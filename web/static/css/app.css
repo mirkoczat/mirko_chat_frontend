@@ -144,3 +144,38 @@ div.important {
   padding-left: 8px;
   padding-top: 0;
 }
+
+.left {
+  overflow: 'hidden';
+  overflow-y: auto;
+}
+.mid {
+  padding: 5px;
+  overflow: 'auto';
+}
+.right {
+  overflow: 'auto';
+}
+.midfull {
+  border-left: 1px solid #444;
+  border-right: 1px solid #444;
+  background-color: #2c2c2c;
+}
+
+.message {
+  padding-bottom: 5px;
+}
+.avatar-plus {
+  display: inline;
+}
+.avatar {
+  padding-left: 5px;
+  width: 35px;
+  height: 30px;
+}
+.male {
+  background: rgba(70, 171, 242, 1);
+}
+.female {
+  background: rgba(242, 70, 208, 1);
+}
