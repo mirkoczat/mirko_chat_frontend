@@ -146,15 +146,15 @@ div.important {
 }
 
 .left {
-  overflow: 'hidden';
+  overflow: hidden;
   overflow-y: auto;
 }
 .mid {
   padding: 5px;
-  overflow: 'auto';
+  overflow: auto;
 }
 .right {
-  overflow: 'auto';
+  overflow: auto;
 }
 .midfull {
   border-left: 1px solid #444;
