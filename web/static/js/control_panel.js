@@ -15,6 +15,7 @@ export class ControlPanel extends React.Component {
       ,show_enter: this.stream.settingShowEnter()
       ,show_priv_box: this.stream.settingShowPrivBox()
       ,notify_mentions: this.stream.settingNotifyMentions()
+      ,hide_solo: this.stream.settingHideSolo()
       ,followed: this.stream.settingFollowed()
       ,blacklist: this.stream.settingBlacklist()
     }
@@ -79,6 +80,7 @@ export class ControlPanel extends React.Component {
         {this.renderCheckbox('show_enter', 'Pokaż wejścia i wyjścia')}
         {this.renderCheckbox('show_priv_box', 'Pokaż okno PRIV')}
         {this.renderCheckbox('notify_mentions', 'Powiadomienia na pulpicie')}
+        {this.renderCheckbox('hide_solo', 'Ukryj jednoosobowe kanały')}
         {this.renderTextarea('followed', 'Śledzeni', 'pseudonimy oddzielone spacją')}
         {this.renderTextarea('blacklist', 'Czarna lista', 'pseudonimy oddzielone spacją')}
           <br />

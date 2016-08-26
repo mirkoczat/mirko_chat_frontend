@@ -47,6 +47,10 @@ export class Rooms extends React.Component {
     var styleLink = {
 
     }
+    var divClass = '';
+    if (room.count_all == 1 && this.stream.settingHideSolo()) {
+      divClass = 'hidden';
+    }
     if (room.name == this.props.tag) {
       styleLink['fontWeight'] = 'bold'
     }
@@ -57,7 +61,7 @@ export class Rooms extends React.Component {
     if (room.count > 0) {
       room_count = "(" + room_count + ")"
     }
-    return <div key={room.name}>
+    return <div key={room.name} className={divClass}>
       {Util.widget_fav(this, room.name)}
       &nbsp;
       <a href={link_anon} style={styleLink} target="_blank" title="Pisz anonimowo">A</a>
