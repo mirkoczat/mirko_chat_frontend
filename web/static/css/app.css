@@ -179,3 +179,7 @@ div.important {
 .female {
   background: rgba(242, 70, 208, 1);
 }
+
+.hidden {
+  display: none;
+}

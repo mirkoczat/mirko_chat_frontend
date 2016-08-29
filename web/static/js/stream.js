@@ -168,6 +168,9 @@ export class Stream {
   settingNotifyMentions() {
     return ("true" === window.localStorage.getItem('notify_mentions')) || false
   }
+  settingHideSolo() {
+    return ("true" === window.localStorage.getItem('hide_solo')) || false
+  }
   settingFollowed() {
     return window.localStorage.getItem('followed') || ""
   }
