@@ -35,18 +35,18 @@ class User extends React.Component {
       color: this.props.user.color
     }
     var username = this.props.user.login //.replace(/_/g, ' ')
+    var wykop_url = 'http://www.wykop.pl/ludzie/' + this.props.user.login.replace(/[@\+]/g, '')
     var avatar = Util.avatar(this.props.user)
     var options = ''
-    var user = <span style={styleLink}>{username}</span>
+    var user = <a style={styleLink} href={wykop_url}>{username}</a>
     if (!this.props.profile) {
       styleLink['cursor'] = 'pointer'
-      user = <a style={styleLink} onClick={this.onClick}
+      user = <a style={styleLink} onClick={this.onClick} href={wykop_url}
         title="Wstawia nick do pola wypowiedzi">
         {username}
       </a>
     }
     if (!this.props.profile && this.state.show_options) {
-      var wykop_url = 'http://www.wykop.pl/ludzie/' + this.props.user.login.replace(/[@\+]/g, '')
       options = <span>
         {' ['}
         <a style={styleLink} onClick={this.onPriv}
