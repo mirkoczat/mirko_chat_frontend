@@ -11,6 +11,7 @@ class User extends React.Component {
     this.onPriv = this.onPriv.bind(this)
     this.onMouseOver = this.onMouseOver.bind(this)
     this.onMouseLeave = this.onMouseLeave.bind(this)
+    this.onMouseDown = this.onMouseDown.bind(this)
   }
   onClick() {
     var user = this.props.user.login.replace(/[@\+]/g, '')
@@ -27,6 +28,11 @@ class User extends React.Component {
   onMouseLeave() {
     this.setState({show_options: false})
   }
+  onMouseDown(e) {
+    if (e.button == 1) {
+      document.open('http://www.wykop.pl/ludzie/' + this.props.user.login.replace(/[@\+]/g, ''), '_blank');
+    }
+  }
   render() {
     var styleDiv = {
       marginBottom: '5px'
@@ -35,18 +41,18 @@ class User extends React.Component {
       color: this.props.user.color
     }
     var username = this.props.user.login //.replace(/_/g, ' ')
-    var wykop_url = 'http://www.wykop.pl/ludzie/' + this.props.user.login.replace(/[@\+]/g, '')
     var avatar = Util.avatar(this.props.user)
     var options = ''
-    var user = <a style={styleLink} href={wykop_url}>{username}</a>
+    var user = <span style={styleLink}>{username}</span>
     if (!this.props.profile) {
       styleLink['cursor'] = 'pointer'
-      user = <a style={styleLink} onClick={this.onClick} href={wykop_url}
+      user = <a style={styleLink} onClick={this.onClick} onMouseDown={this.onMouseDown}
         title="Wstawia nick do pola wypowiedzi">
         {username}
       </a>
     }
     if (!this.props.profile && this.state.show_options) {
+      var wykop_url = 'http://www.wykop.pl/ludzie/' + this.props.user.login.replace(/[@\+]/g, '')
       options = <span>
         {' ['}
         <a style={styleLink} onClick={this.onPriv}
