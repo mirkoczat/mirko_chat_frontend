@@ -30,7 +30,7 @@ class User extends React.Component {
   }
   onMouseDown(e) {
     if (e.button == 1) {
-      document.open('http://www.wykop.pl/ludzie/' + this.props.user.login.replace(/[@\+]/g, ''), '_blank');
+      window.open('http://www.wykop.pl/ludzie/' + this.props.user.login.replace(/[@\+]/g, ''), '_blank');
     }
   }
   render() {
