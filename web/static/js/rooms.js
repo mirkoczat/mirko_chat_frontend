@@ -41,7 +41,7 @@ export class Rooms extends React.Component {
     return result
   }
   renderRoom(room) {
-    var link = '/t/' + room.name
+    var link = '/t/' + encodeURIComponent(room.name)
     var link_anon = link + '/anon'
     //var counted = Util.numFormat(room.count, ["zalogowanych", "zalogowany", "zalogowanych"])
     var styleLink = {
