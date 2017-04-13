@@ -8,7 +8,7 @@ export class Util {
         var key = Math.random()
         return <a key={key} href={href} target="_blank">{url}</a>
       } else {
-        return url
+        return url.replace(/\*\*(.*?)\*\*/g, '<strong>\2</strong>').replace(/\*(.*?)\*/g, '<em>\2</em>') //(⌐ ͡■ ͜ʖ ͡■)
       }
     })
     return s
